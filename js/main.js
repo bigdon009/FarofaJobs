@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('#deactivated').hide();
     $('.job_prog').mouseover(function () {
         $(this).css('background', 'url(image/box_roxo_hover.png) no-repeat center');
     });
@@ -19,19 +20,41 @@ $(document).ready(function () {
     });
 
     $('#blue').click(function () {
+        $('#deactivated').fadeIn();
         $('.job_ux').fadeTo('slow', 1);
         $('.job_ilu').fadeTo('slow', 0.2);
         $('.job_prog').fadeTo('slow', 0.2);
+        $('.job_ux').css('pointer-events', 'all');
+        $('.job_ilu').css('pointer-events', 'none');
+        $('.job_prog').css('pointer-events', 'none');
     });
     $('#yellow').click(function () {
+        $('#deactivated').fadeIn();
         $('.job_ux').fadeTo('slow', 0.2);
         $('.job_ilu').fadeTo('slow', 1);
         $('.job_prog').fadeTo('slow', 0.2);
+        $('.job_ux').css('pointer-events', 'none');
+        $('.job_ilu').css('pointer-events', 'all');
+        $('.job_prog').css('pointer-events', 'none');
     });
     $('#purple').click(function () {
+        $('#deactivated').fadeIn();
         $('.job_ux').fadeTo('slow', 0.2);
         $('.job_ilu').fadeTo('slow', 0.2);
         $('.job_prog').fadeTo('slow', 1);
+        $('.job_ux').css('pointer-events', 'none');
+        $('.job_ilu').css('pointer-events', 'none');
+        $('.job_prog').css('pointer-events', 'all');
+    });
+
+    $('#deactivated').click(function () {
+        $(this).fadeOut();
+        $('.job_ux').fadeTo('slow', 1);
+        $('.job_ilu').fadeTo('slow', 1);
+        $('.job_prog').fadeTo('slow', 1);
+        $('.job_ux').css('pointer-events', 'all');
+        $('.job_ilu').css('pointer-events', 'all');
+        $('.job_prog').css('pointer-events', 'all');
     });
 });
 

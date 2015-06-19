@@ -112,6 +112,12 @@ footer {
     margin-right: auto;
 }
 
+footer span {
+    float: right;
+    height: 100px;
+    width: 250px;
+}
+
 .job_prog {
     width: 242px;
     height: 170px;
