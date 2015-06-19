@@ -45,3 +45,6 @@ Temporary Items
 # Folder with source files
 /_orig/*
 /nbproject/private/
+
+#Other files
+*.rar
