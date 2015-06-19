@@ -43,4 +43,4 @@ Temporary Items
 .apdisk
 
 # Folder with source files
-_orig/*
+/_orig/*
