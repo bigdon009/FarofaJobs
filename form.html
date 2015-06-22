@@ -1,0 +1,81 @@
+<style type="text/css">
+	form {
+		width:698px;
+		height:394px;
+		background-color:#e8e7e9;
+	}
+	
+	form input, form label {
+		display:block;
+	}
+	
+	form input, form textarea {
+		width:316px;
+		height:26px;
+		border-radius:10px;
+		border:none;
+	}
+	
+	form textarea {
+		width:305px;
+		height:189px;
+	}
+	
+	form label {
+		font-family:"OPEN SANS REGULAR";
+		font-size:11px;
+		color:#4c4c4c;
+	}
+	
+	form label:not(first-child) {
+		margin-top:10px;
+		margin-bottom:5px;
+	}
+	
+	form .left, form .right {
+		box-sizing:border-box;
+		width:50%;
+		height:100%;
+		display:inline-block;
+		float:left;
+		padding-top:35px;
+	}
+	form .left {
+		padding-left:26px;
+	}
+	form .right {
+		padding-left:20px;
+		padding-right:26px;
+	}
+	form button#submit {
+		width:173px;
+		height:34px;
+		background-color:#3ad483;
+		border:3px solid #4de896;
+		border-radius:15px;
+		float:right;
+		margin-top:20px;
+		color:white;
+		font-weight:bold;
+		font-size:14px;
+	}
+	form label span.required {
+		color:red;
+	}
+</style>
+<meta charset="UTF-8"/>
+<form>
+	<div class="left">
+		<label for="name">NOME E SOBRENOME</label><input name="name"/>
+		<label for="email">EMAIL <span class="required">*</span></label><input name="email"/>
+		<label for="link">LINK DO PORTFÓLIO</label><input name="link"/>
+		<label for="salary">PRETENSÃO SALARIAL <span class="required">*</span></label><input name="email"/>
+		<label for="linkedin">LINKEDIN</label><input name="linkedin"/>
+		<label for="cv">CURRÍCULO</label><input type="file" name="cv"/>
+	</div>
+	<div class="right">
+		<label for="description">O QUE PRECISAMOS SABER SOBRE VOCÊ? <span class="required">*</span></label><textarea name="description"> </textarea>
+		
+		<button id="submit">ESSA VAGA É MINHA</button>
+	</div>
+</form>

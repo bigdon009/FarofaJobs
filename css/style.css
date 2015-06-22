@@ -1,3 +1,8 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../font/OpenSans-Light.ttf");
+}
+
 header {
     height: 204px;
     width: 100%;
@@ -94,6 +99,11 @@ li span {
     width: 30%;
 }
 
+.jobs .inactive {
+    display: table-cell;
+    width: 30%;
+}
+
 .jobs p {
     font-family: "Open Sans";
     font-weight: lighter;
@@ -137,4 +147,145 @@ footer span {
     height: 170px;
     background: url(../image/box_amarelo_normal.png) no-repeat center;
     transition: background 0.2s linear;
+}
+
+#black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.9;
+    opacity:.90;
+    filter: alpha(opacity=90);
+}
+#white_content {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 700px;
+    height: 712px;
+    background-color: #e7e7e7;
+    z-index:1002;
+    overflow: auto;
+}
+
+#close_btn {
+    float: right;
+    top: -12px;
+    margin-right: 10px;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    z-index: 9999;
+}
+
+#white_content h1 {
+    font-family: 'OpenSans';
+    font-size: 30px;
+    color: #989898;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+#white_content p {
+    font-family: 'OpenSans';
+    font-size: 12px;
+    color: #4c4c4c;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+#description {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    background-color: #3d3d3d;
+    margin-top: 50px;
+}
+
+#description p {
+    font-family: 'OpenSans';
+    font-size: 11px;
+    color: white;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+#border {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    top: 0;
+}
+
+form {
+    width:698px;
+    height:394px;
+    background-color:#e8e7e9;
+}
+
+form input, form label {
+    display:block;
+}
+
+form input, form textarea {
+    font-family: 'OpenSans';
+    font-size: 11px;
+    font-weight: bold;
+    width:316px;
+    height:26px;
+    border-radius:10px;
+    border:none;
+    text-indent: 5px;
+}
+
+form textarea {
+    width:305px;
+    height:189px;
+}
+
+form label {
+    font-family: 'OpenSans';
+    font-size: 11px;
+    color:#4c4c4c;
+}
+
+form label:not(first-child) {
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+form .left, form .right {
+    box-sizing:border-box;
+    width:50%;
+    height:100%;
+    display:inline-block;
+    float:left;
+    padding-top:35px;
+}
+form .left {
+    padding-left:26px;
+}
+form .right {
+    padding-left:20px;
+    padding-right:26px;
+}
+form button#submit {
+    width:173px;
+    height:35px;
+    background: url(../image/essa_vaga_normal.png) no-repeat center;
+    border: none;
+    float:right;
+    margin-top:20px;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+form label span.required {
+    color:red;
 }
