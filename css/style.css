@@ -86,7 +86,7 @@ li span {
 }
 
 .jobs {
-    width: 1024px;
+    width: 1054px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -94,9 +94,11 @@ li span {
     display: table;
 }
 
-.jobs .col {
-    display: table-cell;
-    width: 30%;
+.job_ilu, .job_prog, .job_ux {
+    display:inline-table;
+    width: 25%;
+    margin-left: 18px;
+    margin-bottom: 15px;
 }
 
 .jobs .inactive {
