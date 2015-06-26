@@ -1,6 +1,6 @@
 @font-face {
     font-family: OpenSans;
-    src: url("../font/OpenSans-Light.ttf");
+    src: url("../fonts/OpenSans-Light.ttf");
 }
 
 header {
@@ -16,19 +16,37 @@ nav {
     position: relative;
 }
 
-#logo {
-    height: 104px;
-    width: 1024px;
-    background: url(../image/logo_farofa_jobs.png) no-repeat center left;
+#bannerBg {
+    height: 103px;
+    width: 100%;
+    background: url(../images/tripa.png) repeat-x center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
 }
 
+#bannerTop {
+    height: 103px;
+    width: 100%;
+    background: url(../images/faixa.png) no-repeat center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    z-index: 9997;
+}
+
+/*#logo {
+    height: 104px;
+    width: 384px;
+    background: url(../images/logo.png) no-repeat center left;
+    margin-bottom: 0;
+    z-index: 9998;
+}*/
+
 #fale {
     height: 103px;
     width: 244px;
-    background: url(../image/fale_conosco.png) no-repeat center left;
+    background: url(../images/fale_conosco.png) no-repeat center left;
     float: right;
 }
 
@@ -68,26 +86,26 @@ li span {
 }
 
 .yellow {
-    background: url(../image/botao_amarelo.png) no-repeat center left;
+    background: url(../images/botao_amarelo.png) no-repeat center left;
     width: 150px;
     height: 40px;
 }
 
 .blue {
-    background: url(../image/botao_azul.png) no-repeat center left;
+    background: url(../images/botao_azul.png) no-repeat center left;
     width: 150px;
     height: 40px;
 }
 
 .purple {
-    background: url(../image/botao_roxo.png) no-repeat center left;
+    background: url(../images/botao_roxo.png) no-repeat center left;
     width: 150px;
     height: 40px;
 }
 
 .jobs {
     width: 1054px;
-    height: 600px;
+    height: 590px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -107,7 +125,7 @@ li span {
 }
 
 .jobs p {
-    font-family: "Open Sans";
+    font-family: "OpenSans";
     font-weight: lighter;
     font-size: 25px;
     text-align: center;
@@ -118,51 +136,54 @@ li span {
 
 footer {
     width: 1024px;
-    height: 100px;
-    background: url(../image/visite_nosso_site.png) no-repeat center right;
+    height: 125px;
+    background: url(../images/visite_nosso_site.png) no-repeat center right;
     margin-left: auto;
     margin-right: auto;
 }
 
 footer span {
     float: right;
-    height: 100px;
-    width: 250px;
+    height: 125px;
+    width: 292px;
 }
 
 .job_prog {
     width: 242px;
     height: 170px;
-    background: url(../image/box_roxo_normal.png) no-repeat center;
+    background: url(../images/box_roxo_normal.png) no-repeat center;
     transition: background 0.2s linear;
+    cursor:pointer;
 }
 
 .job_ux {
     width: 242px;
     height: 170px;
-    background: url(../image/box_azul_normal.png) no-repeat center;
+    background: url(../images/box_azul_normal.png) no-repeat center;
     transition: background 0.2s linear;
+    cursor:pointer;
 }
 
 .job_ilu {
     width: 242px;
     height: 170px;
-    background: url(../image/box_amarelo_normal.png) no-repeat center;
+    background: url(../images/box_amarelo_normal.png) no-repeat center;
     transition: background 0.2s linear;
+    cursor:pointer;
 }
 
 #black_overlay{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
     background-color: black;
     z-index:1001;
-    -moz-opacity: 0.9;
+    /*-moz-opacity: 0.9;*/
     opacity:.90;
-    filter: alpha(opacity=90);
+    /*filter: alpha(opacity=90);*/
 }
 #white_content {
     display: none;
@@ -170,7 +191,7 @@ footer span {
     top: 10%;
     left: 30%;
     width: 700px;
-    height: 712px;
+    height: 750px;
     background-color: #e7e7e7;
     z-index:1002;
     overflow: auto;
@@ -196,10 +217,12 @@ footer span {
 
 #white_content p {
     font-family: 'OpenSans';
-    font-size: 12px;
+    font-size: 14px;
     color: #4c4c4c;
     margin-left: 25px;
     margin-top: 40px;
+    width:650px;
+    /*text-justify:auto;*/
 }
 
 #description {
@@ -277,17 +300,34 @@ form .right {
     padding-left:20px;
     padding-right:26px;
 }
-form button#submit {
+form div#submit {
     width:173px;
     height:35px;
-    background: url(../image/essa_vaga_normal.png) no-repeat center;
+    background: url(../images/essa_vaga_normal.png) no-repeat center;
     border: none;
     float:right;
     margin-top:20px;
+    text-align:center;
+    line-height:35px;
     color:white;
     font-weight:bold;
     font-size:14px;
+    cursor:pointer;
 }
 form label span.required {
+    color:red;
+}
+
+#emailResult {
+    font-family: 'OpenSans';
+    float:right;
+    margin-top:10px;
+}
+
+#emailResult.success {
+    color:green;
+}
+
+#emailResult.error {
     color:red;
 }
