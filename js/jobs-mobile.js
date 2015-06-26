@@ -13,9 +13,10 @@ $(document).ready(function () {
 
     $('#emailResult').css('font-size', '14px');
 
-    $('.purple').css({'background': '#8e48d6', 'width': '100%', 'height': '50px'});
-    $('.yellow').css({'background': '#ffcb05', 'width': '100%', 'height': '50px'});
-    $('.blue').css({'background': '#0dbeff', 'width': '100%', 'height': '50px'});
+    $('.purple, .yellow, .blue').css({'width': '100%', 'height': '50px'});
+    $('.purple').css({'background': '#8e48d6'});
+    $('.yellow').css({'background': '#ffcb05'});
+    $('.blue').css({'background': '#0dbeff'});
 
     $('#white_content').css({'width': '100%', 'height': '1100px', 'left': '0', 'overflow': 'visible', 'top': '0'});
     $('#white_content p').css({'width': '90%'});
@@ -28,9 +29,7 @@ $(document).ready(function () {
     $('form .right').css({'float': 'none', 'width': '100%', 'padding-left': '26px', 'margin-top': '20px'});
 
     function newAlign() {
-        $('.job_ilu').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
-        $('.job_prog').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
-        $('.job_ux').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
+        $('.job_ilu, .job_prog, .job_ux').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
     }
 
     $('.job_ilu').click(function () {
@@ -53,8 +52,7 @@ $(document).ready(function () {
     $('.blue').click(function () {
         newAlign();
         $('.job_ux').fadeTo('slow', 1);
-        $('.job_ilu').css('display', 'none');
-        $('.job_prog').css('display', 'none');
+        $('.job_ilu, .job_prog').css('display', 'none');
         $(this).css('background', '#0dbeff');
         $('.yellow').css('background', '#ffcb05');
         $('.purple').css('background', '#8e48d6');
@@ -62,8 +60,7 @@ $(document).ready(function () {
     $('.yellow').click(function () {
         newAlign();
         $('.job_ilu').fadeTo('slow', 1);
-        $('.job_ux').css('display', 'none');
-        $('.job_prog').css('display', 'none');
+        $('.job_ux, .job_prog').css('display', 'none');
         $(this).css('background', '#ffcb05');
         $('.blue').css('background', '#0dbeff');
         $('.purple').css('background', '#8e48d6');
@@ -71,8 +68,7 @@ $(document).ready(function () {
     $('.purple').click(function () {
         newAlign();
         $('.job_prog').fadeTo('slow', 1);
-        $('.job_ux').css('display', 'none');
-        $('.job_ilu').css('display', 'none');
+        $('.job_ux, .job_ilu').css('display', 'none');
         $(this).css('background', '#8e48d6');
         $('.blue').css('background', '#0dbeff');
         $('.yellow').css('background', '#ffcb05');
