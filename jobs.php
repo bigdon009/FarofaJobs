@@ -24,82 +24,94 @@
                 <div id="bannerTop"></div>
                 <!--<a href="#"><div id="fale"></div></a>-->
             </div>
-            <nav>
-                <div id="menu">
-                    <ul>
-                        <li class="blue"><a href="#"><span>ux</span></a></li>
-                        <li class="yellow"><a href="#"><span>criação</span></a></li>
-                        <li class="purple"><a href="#"><span>desenvolvimento</span></a></li>
-                    </ul>
-                </div>
-            </nav>
+            <?php
+            //Bloco em php apenas para não aparecerem os blocos comentados no navegador.
+//            <nav>
+//                <div id="menu">
+//                    <!--<ul>
+//                    <li class="blue"><a href="#"><span>ux</span></a></li>
+//                        <li class="yellow"><a href="#"><span>criação</span></a></li>
+//                        <li class="purple"><a href="#"><span>desenvolvimento</span></a></li>
+//                    </ul>-->
+//                </div>
+//            </nav>
+            ?>
         </header>
-        <div class="jobs">          
-            <div class="job_ux" id="jux1">
-                <p>Arquiteto de Informação Pleno</p>
+        <div class="jobs">
+            <div id="no-jobs">
+                <h1>No momento, não há vagas disponíveis. Volte em breve!</h1>
             </div>
-            <!--<div class="job_ux" id="jux2">
-                <p>Arquiteto de Informação Júnior</p>
-            </div>-->
-            <div class="job_ilu" id="jilu1">
-                <p>Game Designer Pleno</p>
-            </div>
-            <div class="job_prog" id="jpro4">
-                <p>Desenvolvedor Web Pleno</p>
-            </div>
-            <!--<div class="job_ilu" id="jilu2">
-                <p>Game Designer Júnior</p>
-            </div>-->
-            <div class="job_ilu" id="jilu3">
-                <p>Designer de Interfaces Pleno</p>
-            </div>
-            <div class="job_ilu" id="jilu4">
-                <p>Designer de Interfaces Júnior</p>
-            </div>
-            <div class="job_ilu" id="jilu5">
-                <p>Ilustrador Pleno</p>
-            </div>
-            <div class="job_ilu" id="jilu6">
-                <p>Modelador 3D<br>Pleno</p>
-            </div>
-            <div class="job_ilu" id="jilu7">
-                <p>Animador 3D Pleno</p>
-            </div>               
-            <div class="job_prog" id="jpro1">
-                <p>Desenvolvedor C# Unity Pleno</p>
-            </div>
-            <div class="job_prog" id="jpro2">
-                <p>Desenvolvedor C# Unity Júnior</p>
-            </div>
-            <div class="job_prog" id="jpro3">
-                <p>Analista de Sistemas Sênior</p>
-            </div>
+            <?php
+            //Bloco em php apenas para não aparecerem os blocos comentados no navegador.
+//            <!--<div class="job_ux" id="jux1">
+//                <p>Arquiteto de Informação Pleno</p>
+//            </div>
+//            <div class="job_ux" id="jux2">
+//                <p>Arquiteto de Informação Júnior</p>
+//            </div>
+//            <div class="job_ilu" id="jilu1">
+//                <p>Game Designer Pleno</p>
+//            </div>
+//            <div class="job_prog" id="jpro4">
+//                <p>Desenvolvedor Web Pleno</p>
+//            </div>
+//            <div class="job_ilu" id="jilu2">
+//                <p>Game Designer Júnior</p>
+//            </div>
+//            <div class="job_ilu" id="jilu3">
+//                <p>Designer de Interfaces Pleno</p>
+//            </div>
+//            <div class="job_ilu" id="jilu4">
+//                <p>Designer de Interfaces Júnior</p>
+//            </div>
+//            <div class="job_ilu" id="jilu5">
+//                <p>Ilustrador Pleno</p>
+//            </div>
+//            <div class="job_ilu" id="jilu6">
+//                <p>Modelador 3D<br>Pleno</p>
+//            </div>
+//            <div class="job_ilu" id="jilu7">
+//                <p>Animador 3D Pleno</p>
+//            </div>               
+//            <div class="job_prog" id="jpro1">
+//                <p>Desenvolvedor C# Unity Pleno</p>
+//            </div>
+//            <div class="job_prog" id="jpro2">
+//                <p>Desenvolvedor C# Unity Júnior</p>
+//            </div>
+//            <div class="job_prog" id="jpro3">
+//                <p>Analista de Sistemas Sênior</p>
+//            </div>-->
+            ?>
         </div>
-        <div id="white_content">
-            <div id="border"></div>
-            <a href="#"><div id="close_btn"></div></a>
-            <h1>Título da Vaga</h1>
-            <div id="description"><p>Descrição da Vaga</p></div>
-            <p id="vaga"></p>
-            <form id="formCon">
-                <div class="left">
-                    <input type="hidden" name="jobname" id="jobname" value=""/>
-                    <label for="name">NOME E SOBRENOME <span class="required">*</span></label><input name="name"/>
-                    <label for="email">EMAIL <span class="required">*</span></label><input name="email"/>
-                    <label for="link">LINK DO PORTFÓLIO</label><input name="link"/>
-                    <label for="salary">PRETENSÃO SALARIAL <span class="required">*</span></label><input name="salary"/>
-                    <label for="linkedin">LINKEDIN</label><input name="linkedin"/>
-                    <label for="cv">CURRÍCULO</label><input type="file" name="cv"/>
-                </div>
-                <div class="right">
-                    <label for="description">O QUE PRECISAMOS SABER SOBRE VOCÊ? <span class="required">*</span></label><textarea name="description"> </textarea>
-
-                    <div onclick="sendMail()" id="submit"></div>
-                    <div id="emailResult"></div>
-                </div>
-            </form>
-        </div>
-        <div id="black_overlay"></div>
+        <?php
+        //Bloco em php apenas para não aparecerem os blocos comentados no navegador.
+//        <div id="white_content">
+//            <div id="border"></div>
+//            <a href="#"><div id="close_btn"></div></a>
+//            <h1>Título da Vaga</h1>
+//            <div id="description"><p>Descrição da Vaga</p></div>
+//            <p id="vaga"></p>
+//            <form id="formCon">
+//                <div class="left">
+//                    <input type="hidden" name="jobname" id="jobname" value=""/>
+//                    <label for="name">NOME E SOBRENOME <span class="required">*</span></label><input name="name"/>
+//                    <label for="email">EMAIL <span class="required">*</span></label><input name="email"/>
+//                    <label for="link">LINK DO PORTFÓLIO</label><input name="link"/>
+//                    <label for="salary">PRETENSÃO SALARIAL <span class="required">*</span></label><input name="salary"/>
+//                    <label for="linkedin">LINKEDIN</label><input name="linkedin"/>
+//                    <label for="cv">CURRÍCULO</label><input type="file" name="cv"/>
+//                </div>
+//                <div class="right">
+//                    <label for="description">O QUE PRECISAMOS SABER SOBRE VOCÊ? <span class="required">*</span></label><textarea name="description"> </textarea>
+//
+//                    <div onclick="sendMail()" id="submit"></div>
+//                    <div id="emailResult"></div>
+//                </div>
+//            </form>
+//        </div>
+//        <div id="black_overlay"></div>
+        ?>
         <footer>
             <?php if (!wp_is_mobile()) { ?>
                 <div class="fb-share-button" data-href="http://farofastudios.com.br/jobs" data-layout="button"></div>

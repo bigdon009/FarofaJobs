@@ -17,7 +17,6 @@ $(document).ready(function () {
                 $('h1', '#white_content').text(str);
                 document.getElementById('white_content').style.display = 'block';
                 document.getElementById('black_overlay').style.display = 'block';
-
                 $("form #jobname").val(str);
             });
     $('.job_ux')
@@ -58,7 +57,6 @@ $(document).ready(function () {
                 $('h1', '#white_content').text(str);
                 document.getElementById('white_content').style.display = 'block';
                 document.getElementById('black_overlay').style.display = 'block';
-
                 $("form #jobname").val(str);
             });
 

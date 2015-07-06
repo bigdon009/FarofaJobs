@@ -331,3 +331,9 @@ form label span.required {
 #emailResult.error {
     color:red;
 }
+
+#no-jobs h1{
+    font-family: 'OpenSans';
+    font-size: 30px;
+    text-align: center;
+}
