@@ -13,11 +13,10 @@ $(document).ready(function () {
 
     $('#emailResult').css('font-size', '14px');
 
-    $('.purple, .yellow, .blue, .green').css({'width': '100%', 'height': '50px'});
+    $('.purple, .yellow, .blue').css({'width': '100%', 'height': '50px'});
     $('.purple').css({'background': '#8e48d6'});
     $('.yellow').css({'background': '#ffcb05'});
     $('.blue').css({'background': '#0dbeff'});
-    $('.green').css({'background': '#10BB30'});
 
     $('#white_content').css({'width': '100%', 'height': '1100px', 'left': '0', 'overflow': 'visible', 'top': '0'});
     $('#white_content p').css({'width': '90%'});
@@ -30,23 +29,19 @@ $(document).ready(function () {
     $('form .right').css({'float': 'none', 'width': '100%', 'padding-left': '26px', 'margin-top': '20px'});
 
     function newAlign() {
-        $('.job_ilu, .job_prog, .job_ux, .job_com').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
+        $('.job_ilu, .job_prog, .job_ux').css({'margin-left': '0', 'margin-right': '0', 'margin-top': '10px', 'width': '30%'});
     }
 
     $('.job_ilu').click(function () {
-        $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_amarelo_m.png) no-repeat center');
+        $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_amarelo_m.png) no-repeat center');
         $('html, body').animate({scrollTop: 0}, 100);
     });
     $('.job_prog').click(function () {
-        $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_roxo_m.png) no-repeat center');
+        $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_roxo_m.png) no-repeat center');
         $('html, body').animate({scrollTop: 0}, 100);
     });
     $('.job_ux').click(function () {
-        $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_azul_m.png) no-repeat center');
-        $('html, body').animate({scrollTop: 0}, 100);
-    });
-    $('.job_com').click(function () {
-        $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_verde_m.png) no-repeat center');
+        $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_azul_m.png) no-repeat center');
         $('html, body').animate({scrollTop: 0}, 100);
     });
 
@@ -57,37 +52,27 @@ $(document).ready(function () {
     $('.blue').click(function () {
         newAlign();
         $('.job_ux').fadeTo('slow', 1);
-        $('.job_ilu, .job_prog, .job_com').css('display', 'none');
+        $('.job_ilu, .job_prog').css('display', 'none');
         $(this).css('background', '#0dbeff');
         $('.yellow').css('background', '#ffcb05');
         $('.purple').css('background', '#8e48d6');
-        $('.green').css('background', '#10BB30');
     });
     $('.yellow').click(function () {
         newAlign();
         $('.job_ilu').fadeTo('slow', 1);
-        $('.job_ux, .job_prog, .job_com').css('display', 'none');
+        $('.job_ux, .job_prog').css('display', 'none');
         $(this).css('background', '#ffcb05');
         $('.blue').css('background', '#0dbeff');
         $('.purple').css('background', '#8e48d6');
-        $('.green').css('background', '#10BB30');
     });
     $('.purple').click(function () {
         newAlign();
         $('.job_prog').fadeTo('slow', 1);
-        $('.job_ux, .job_ilu, .job_com').css('display', 'none');
+        $('.job_ux, .job_ilu').css('display', 'none');
         $(this).css('background', '#8e48d6');
         $('.blue').css('background', '#0dbeff');
         $('.yellow').css('background', '#ffcb05');
-        $('.green').css('background', '#10BB30');
-    });
-    $('.green').click(function () {
-        newAlign();
-        $('.job_com').fadeTo('slow', 1);
-        $('.job_ux, .job_ilu, .job_prog').css('display', 'none');
-        $(this).css('background', '#10BB30');
-        $('.blue').css('background', '#0dbeff');
-        $('.yellow').css('background', '#ffcb05');
-        $('.purple').css('background', '#8e48d6');
     });
 });
+
+

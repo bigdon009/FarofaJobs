@@ -1,6 +1,5 @@
 function sendMail() {
     var data = new FormData($("form")[0]);
-    //var data = $('#formCon').serialize();
     data.append("action", "send_mail");
 
     $("form div#submit").hide();
@@ -12,7 +11,7 @@ function sendMail() {
 
     $.ajax({
         method: "POST",
-        url: "job-form.php",
+        url: ajaxUrl,
         dataType: "json",
         processData: false,
         contentType: false,
@@ -20,16 +19,12 @@ function sendMail() {
         success: function (data, textStatus, jqXHR) {
             console.log("success", data);
 
-            if (data.success === true) {
+            if (data.success == true) {
                 $("#emailResult")
                         .text("Email enviado com sucesso.")
                         .removeClass("error")
                         .removeClass("success")
                         .addClass("success");
-
-                $('#formCon').each(function () {
-                    this.reset();
-                });
             }
             else {
                 $("#emailResult")
@@ -41,7 +36,8 @@ function sendMail() {
 
             $("form div#submit").show();
         },
-        error: function (jqXHR, textStatus, errorThrown){
+        error: function (jqXHR, textStatus, errorThrown)
+        {
             console.log("error", jqXHR, textStatus, errorThrown);
 
             $("#emailResult")

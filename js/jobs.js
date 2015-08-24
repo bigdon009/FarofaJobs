@@ -1,38 +1,39 @@
 $(document).ready(function () {
     $('.job_prog')
             .mouseover(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_roxo_hover.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_roxo_hover.png) no-repeat center');
                 $('p', this).css('color', 'white');
             })
             .mouseout(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_roxo_normal.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_roxo_normal.png) no-repeat center');
                 $('p', this).css('color', '#454545');
             })
             .click(function () {
                 var name = $(this).attr('id');
                 vagas(name);
                 $('#border').css('background', '#8E48D6');
-                $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_roxo.png) no-repeat center');
+                $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_roxo.png) no-repeat center');
                 var str = $('p', this).text();
                 $('h1', '#white_content').text(str);
                 document.getElementById('white_content').style.display = 'block';
                 document.getElementById('black_overlay').style.display = 'block';
+
                 $("form #jobname").val(str);
             });
     $('.job_ux')
             .mouseover(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_azul_hover.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_azul_hover.png) no-repeat center');
                 $('p', this).css('color', 'white');
             })
             .mouseout(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_azul_normal.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_azul_normal.png) no-repeat center');
                 $('p', this).css('color', '#454545');
             })
             .click(function () {
                 var name = $(this).attr('id');
                 vagas(name);
                 $('#border').css('background', '#0DBEFF');
-                $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_azul.png) no-repeat center');
+                $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_azul.png) no-repeat center');
                 var str = $('p', this).text();
                 $('h1', '#white_content').text(str);
                 document.getElementById('white_content').style.display = 'block';
@@ -41,24 +42,47 @@ $(document).ready(function () {
             });
     $('.job_ilu')
             .mouseover(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_amarelo_hover.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_amarelo_hover.png) no-repeat center');
                 $('p', this).css('color', 'white');
             })
             .mouseout(function () {
-                $(this).css('background', 'url(' + template_url + '/images/box_amarelo_normal.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/box_amarelo_normal.png) no-repeat center');
                 $('p', this).css('color', '#454545');
             })
             .click(function () {
                 var name = $(this).attr('id');
                 vagas(name);
                 $('#border').css('background', '#FFCB05');
-                $('#close_btn').css('background', 'url(' + template_url + '/images/fechar_amarelo.png) no-repeat center');
+                $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_amarelo.png) no-repeat center');
                 var str = $('p', this).text();
                 $('h1', '#white_content').text(str);
                 document.getElementById('white_content').style.display = 'block';
                 document.getElementById('black_overlay').style.display = 'block';
+
                 $("form #jobname").val(str);
             });
+
+      $('.job_com')
+              .mouseover(function () {
+                  $(this).css('background', 'url(' + template_url + 'images/box_verde_hover.png) no-repeat center');
+                  $('p', this).css('color', 'white');
+              })
+              .mouseout(function () {
+                  $(this).css('background', 'url(' + template_url + 'images/box_verde_normal.png) no-repeat center');
+                  $('p', this).css('color', '#454545');
+              })
+              .click(function () {
+                  var name = $(this).attr('id');
+                  vagas(name);
+                  $('#border').css('background', '#10BB30');
+                  $('#close_btn').css('background', 'url(' + template_url + 'images/fechar_verde.png) no-repeat center');
+                  var str = $('p', this).text();
+                  $('h1', '#white_content').text(str);
+                  document.getElementById('white_content').style.display = 'block';
+                  document.getElementById('black_overlay').style.display = 'block';
+
+                  $("form #jobname").val(str);
+              });
 
     $('#close_btn').click(function () {
         document.getElementById('white_content').style.display = 'none';
@@ -76,60 +100,83 @@ $(document).ready(function () {
 
     $('.blue').click(function () {
         $('.job_ux').fadeTo('slow', 1);
-        $('.job_ilu, .job_prog').css('display', 'none');
+        $('.job_ilu, .job_prog, .job_com').css('display', 'none');
         if (selected !== 1) {
-            $(this).css('background', 'url(' + template_url + '/images/botao_azul.png) no-repeat center');
-            $('.yellow').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
-            $('.purple').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
+            $(this).css('background', 'url(' + template_url + 'images/botao_azul.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
             selected = 1;
         } else {
-            $('.yellow').css('background', 'url(' + template_url + '/images/botao_amarelo.png) no-repeat center');
-            $('.purple').css('background', 'url(' + template_url + '/images/botao_roxo.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_amarelo.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_roxo.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_verde.png) no-repeat center');
             selected = 0;
-            $('.job_ilu, .job_prog').fadeTo('slow', 1);
+            $('.job_ilu, .job_prog, .job_com').fadeTo('slow', 1);
         }
     });
     $('.yellow').click(function () {
         $('.job_ilu').fadeTo('slow', 1);
-        $('.job_ux, .job_prog').css('display', 'none');
+        $('.job_ux, .job_prog, .job_com').css('display', 'none');
         if (selected !== 2) {
-            $(this).css('background', 'url(' + template_url + '/images/botao_amarelo.png) no-repeat center');
-            $('.blue').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
-            $('.purple').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
+            $(this).css('background', 'url(' + template_url + 'images/botao_amarelo.png) no-repeat center');
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
             selected = 2;
         } else {
-            $('.blue').css('background', 'url(' + template_url + '/images/botao_azul.png) no-repeat center');
-            $('.purple').css('background', 'url(' + template_url + '/images/botao_roxo.png) no-repeat center');
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_azul.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_roxo.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_verde.png) no-repeat center');
             selected = 0;
-            $('.job_ux, .job_prog').fadeTo('slow', 1);
+            $('.job_ux, .job_prog, .job_com').fadeTo('slow', 1);
         }
     });
     $('.purple').click(function () {
         $('.job_prog').fadeTo('slow', 1);
-        $('.job_ux, .job_ilu').css('display', 'none');
+        $('.job_ux, .job_ilu, .job_com').css('display', 'none');
         if (selected !== 3) {
-            $(this).css('background', 'url(' + template_url + '/images/botao_roxo.png) no-repeat center');
-            $('.blue').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
-            $('.yellow').css('background', 'url(' + template_url + '/images/botao_desativado.png) no-repeat center');
+            $(this).css('background', 'url(' + template_url + 'images/botao_roxo.png) no-repeat center');
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
             selected = 3;
         } else {
-            $('.blue').css('background', 'url(' + template_url + '/images/botao_azul.png) no-repeat center');
-            $('.yellow').css('background', 'url(' + template_url + '/images/botao_amarelo.png) no-repeat center');
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_azul.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_amarelo.png) no-repeat center');
+            $('.green').css('background', 'url(' + template_url + 'images/botao_verde.png) no-repeat center');
             selected = 0;
-            $('.job_ux, .job_ilu').fadeTo('slow', 1);
+            $('.job_ux, .job_ilu, .job_com').fadeTo('slow', 1);
+        }
+    });
+    $('.green').click(function () {
+        $('.job_com').fadeTo('slow', 1);
+        $('.job_ux, .job_ilu, .job_prog').css('display', 'none');
+        if (selected !== 4) {
+            $(this).css('background', 'url(' + template_url + 'images/botao_verde.png) no-repeat center');
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_desativado.png) no-repeat center');
+            selected = 4;
+        } else {
+            $('.blue').css('background', 'url(' + template_url + 'images/botao_azul.png) no-repeat center');
+            $('.yellow').css('background', 'url(' + template_url + 'images/botao_amarelo.png) no-repeat center');
+            $('.purple').css('background', 'url(' + template_url + 'images/botao_roxo.png) no-repeat center');
+            selected = 0;
+            $('.job_ux, .job_ilu, .job_prog').fadeTo('slow', 1);
         }
     });
 
     $('#submit')
             .mouseover(function () {
-                $(this).css('background', 'url(' + template_url + '/images/essa_vaga_hover.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/essa_vaga_hover.png) no-repeat center');
             })
             .mouseout(function () {
-                $(this).css('background', 'url(' + template_url + '/images/essa_vaga_normal.png) no-repeat center');
+                $(this).css('background', 'url(' + template_url + 'images/essa_vaga_normal.png) no-repeat center');
             });
-            
+
     function vagas(name) {
-        $('#vaga', '#white_content').text(hiring[name]);
+        $('#vaga', '#white_content').html(hiring[name]);
     }
 
     var hiring = {'jux1': 'Informações mal organizadas te tiram do sério? Então essa vaga pode ser sua. Você precisa saber coordenar projetos, conceituar soluções para problemas de usabilidade, formular e aplicar testes de usabilidade, além de manjar de prototipagem e wireframe. Para juntar-se a nós, é importante ser criativo e ter conhecimento em InDesign, Illustrator e Photoshop. Será um diferencial experiência no mercado de games.',
@@ -143,8 +190,16 @@ $(document).ready(function () {
         'jilu7': 'Se você gosta de brincar de marionete e dar vida aos personagens, seu lugar é aqui. Para a vaga é imprescindível conhecimento profundo de rigging, em conceitos de animação, Unity3D, Mecanim e métodos de exportação em fbx para Unity3D. Experiência no mercado de games e inglês são considerados diferenciais.',
         'jpro1': 'Gosta de detalhes, tem bom senso e sabe lidar com limitações de software? Então, venha trabalhar conosco. A vaga pede conhecimentos em Unity 3D, C#, experiência em desenvolvimento de jogos 3D e inglês avançado. Contato com arquitetura cliente/servidor, desenvolvimento para plataformas iOS e Android, NGUI e 2dToolkit são diferenciais.',
         'jpro2': 'Você é da turma dos Jedi ou dos Sith? Na verdade não importa de que lado da Força você está, mas se possui habilidade com Unity 3D, C# e manja de inglês. Noções de arquitetura cliente/servidor, NGUI e 2dToolkit são um diferencial.',
-        'jpro3': 'Banco de dados e Java são seu forte? Tem inglês, experiência com arquitetura cliente/servidor, modelagem de dados, desenvolvimebto back-end para jogos e com Multithreading? Se a resposta for sim, envie seu currículo para a Farofa. Conhecimento em Smartfox, Unity3D e Linux são diferenciais.',
-        'jpro4': 'Se você manja tudo de programação e gosta de rotina, aqui é seu lugar. Para a vaga é necessário experiência em PHP, Banco de dados SQL, HTML, CSS e Javascript. Diferenciais como experiência com sites responsivos e HTML 5 ganham pontos.'
+        'jpro3': 'Banco de dados e Java são seu forte? Tem inglês, experiência com arquitetura cliente/servidor, modelagem de dados, desenvolvimento back-end para jogos e com Multithreading? Se a resposta for sim, envie seu currículo para a Farofa. Conhecimento em Smartfox, Unity3D e Linux são diferenciais.',
+        'jpro4': 'Se você manja tudo de programação e gosta de rotina, aqui é seu lugar. Para a vaga é necessário experiência em PHP, Banco de dados SQL, HTML, CSS e Javascript. Diferenciais como experiência com sites responsivos e HTML 5 ganham pontos.',
+    	  'jcom1': ''+
+          'Para a vaga é fundamental ter experiência na área comercial. Atuação em agências de publicidade será uma vantagem competitiva. O profissional irá operar em projetos existentes da Farofa Studios e na captação de novos clientes. Ter habilidade com plataforma Mac e ferramentas de apresentação como Keynote e Power Point são requisitos imprescindíveis.'+
+          '<br>'+
+          '<strong>Perfil</strong>'+
+          '<ul class="job-list">'+
+            '<li>Preferencialmente feminino</li>'+
+            '<li>Idade entre 24 e 32 anos</li>'+
+            '<li>Possuir carro para reuniões externas</li>'+
+          '</ul>'
     };
 });
-

@@ -1,32 +1,36 @@
 <?
-
-function bloginfo($str){
-    if (strcmp($str,"stylesheet_url")==0)
-        echo "css";
-}
-
-function admin_url($str){
-    if (strcmp($str,'admin-ajax.php')==0)
-        echo "/jobs-form.php";
-}
-
-function wp_is_mobile(){
-    static $is_mobile;
-
-    if (isset($is_mobile))
-        return $is_mobile;
-
-    if (empty($_SERVER['HTTP_USER_AGENT'])) {
-        $is_mobile=false;
-    } elseif (strpos($_SERVER['HTTP_USER_AGENT'],'Mobile')!==false // many mobile devices (all iPhone, iPad, etc.)
-            ||strpos($_SERVER['HTTP_USER_AGENT'],'Android')!==false||strpos($_SERVER['HTTP_USER_AGENT'],'Silk/')!==false||strpos($_SERVER['HTTP_USER_AGENT'],'Kindle')!==false||strpos($_SERVER['HTTP_USER_AGENT'],'BlackBerry')!==false||strpos($_SERVER['HTTP_USER_AGENT'],'Opera Mini')!==false||strpos($_SERVER['HTTP_USER_AGENT'],'Opera Mobi')!==false) {
-        $is_mobile=true;
-    } else {
-        $is_mobile=false;
-    }
-
-    return $is_mobile;
-}
+	function bloginfo($str) {
+		if(strcmp($str,"stylesheet_url") == 0)
+			echo "css";
+	}
+	
+	function admin_url($str) {
+		if(strcmp($str,'admin-ajax.php') == 0)
+			echo "/jobs-form.php"; 
+	}
+	
+	function wp_is_mobile() {
+		static $is_mobile;
+ 
+	    if ( isset($is_mobile) )
+	        return $is_mobile;
+	 
+	    if ( empty($_SERVER['HTTP_USER_AGENT']) ) {
+	        $is_mobile = false;
+	    } elseif ( strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false // many mobile devices (all iPhone, iPad, etc.)
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'Android') !== false
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'Silk/') !== false
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'Kindle') !== false
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'BlackBerry') !== false
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== false
+	        || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mobi') !== false ) {
+	            $is_mobile = true;
+	    } else {
+	        $is_mobile = false;
+	    }
+	 
+	    return $is_mobile;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,9 +49,9 @@ function wp_is_mobile(){
         <script type="text/javascript" src="<?php bloginfo('template_url'); ?>js/jobs-form.js"></script> 
     </head>
     <body>
-<?php if (wp_is_mobile()) { ?>
+        <?php if (wp_is_mobile()) { ?>
             <script type="text/javascript" src="<?php bloginfo('template_url'); ?>js/jobs-mobile.js"></script>
-<?php } ?>
+        <?php } ?>
         <header>
             <div id="bannerBg">
                 <!--<div id="logo"></div>-->
@@ -138,7 +142,7 @@ function wp_is_mobile(){
         </div>
         <div id="black_overlay"></div>
         <footer>
-<?php if (!wp_is_mobile()) { ?>
+            <?php if (!wp_is_mobile()) { ?>
                 <div class="fb-share-button" data-href="http://farofastudios.com.br/jobs" data-layout="button"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://farofastudios.com.br/jobs" data-count="none">Tweet</a>
                 <div class="g-plus" data-action="share" data-annotation="none" data-href="http://farofastudios.com.br/jobs"></div>

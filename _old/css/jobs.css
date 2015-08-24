@@ -3,13 +3,6 @@
     src: url("../fonts/OpenSans-Light.ttf");
 }
 
-h2 {
-	font-family:"OpenSans";
-	text-align:center;
-	color:#444;
-	padding-top:100px;
-}
-
 header {
     height: 204px;
     width: 100%;
@@ -79,15 +72,6 @@ li {
     margin-top: 30px;
 }
 
-ul.job-list li {
-  float:none;
-  list-style: circle;
-  margin:0;
-}
-ul.job-list {
-  margin:0;
-}
-
 li span {
     font-family: "Open Sans";
     font-size: 11px;
@@ -119,12 +103,6 @@ li span {
     height: 40px;
 }
 
-.green {
-    background: url(../images/botao_verde.png) no-repeat center left;
-    width: 150px;
-    height: 40px;
-}
-
 .jobs {
     width: 1054px;
     height: 590px;
@@ -134,7 +112,7 @@ li span {
     display: table;
 }
 
-.job_ilu, .job_prog, .job_ux, .job_com {
+.job_ilu, .job_prog, .job_ux {
     display:inline-table;
     width: 25%;
     margin-left: 18px;
@@ -194,14 +172,6 @@ footer span {
     cursor:pointer;
 }
 
-.job_com {
-    width: 242px;
-    height: 170px;
-    background: url(../images/box_verde_normal.png) no-repeat center;
-    transition: background 0.2s linear;
-    cursor:pointer;
-}
-
 #black_overlay{
     display: none;
     position: fixed;
@@ -250,7 +220,7 @@ footer span {
     font-size: 14px;
     color: #4c4c4c;
     margin-left: 25px;
-    margin-top: 20px;
+    margin-top: 40px;
     width:650px;
     /*text-justify:auto;*/
 }
@@ -321,7 +291,7 @@ form .left, form .right {
     height:100%;
     display:inline-block;
     float:left;
-    padding-top:25px;
+    padding-top:35px;
 }
 form .left {
     padding-left:26px;
